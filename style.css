@@ -1,0 +1,108 @@
+:root {
+
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url('fonts/DINPro.woff');
+} 
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@font-face {
+    font-family: 'Gilroy ExtraBold';
+    src: url('fonts/Gilroy-ExtraBold.otf') format('truetype');;
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src:  url('fonts/Circe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DINPro', sans-serif;    
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding-left: 70px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+h1 {
+    font-size: 34px;
+    font-family: "Circe";
+    color: rgb(39, 39, 39);
+    text-transform: uppercase;
+    line-height: 1.024;      
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+section {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+h2 {
+    font-size: 27px;
+    color: rgb(36, 36, 36);
+    text-transform: uppercase;      
+}  
+
+.page-1 .text {
+    font-size: 109px;
+    font-family: "Gilroy";
+    color: rgb(23, 23, 23);
+    text-transform: uppercase;
+    line-height: 1.073;
+    text-align: left;     
+}
+
+b {
+    font-family: 'Gilroy ExtraBold';
+}
+
+.page-2 .text {
+    font-size: 18px;
+    color: rgb(23, 23, 23);
+    line-height: 1.364;
+    width: 780px;
+    height: 450px;
+    overflow-y: scroll;
+}
+  
+footer {
+    margin-bottom: 15px;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
