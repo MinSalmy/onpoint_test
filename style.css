@@ -1,108 +1,354 @@
 :root {
-
+  --buttons-color: #ff6699;
 }
 
 @font-face {
-    font-family: 'DINPro';
-    src: url('fonts/DINPro.woff');
-} 
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-@font-face {
-    font-family: 'Gilroy ExtraBold';
-    src: url('fonts/Gilroy-ExtraBold.otf') format('truetype');;
-    font-weight: 800;
-    font-style: normal;
+  font-family: 'DINPro';
+  src: url('fonts/DINPro.woff');
 }
 
 @font-face {
-    font-family: 'Circe';
-    src:  url('fonts/Circe-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-ExtraBold.otf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'DINPro', sans-serif;    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
 body {
-    width: 100%;
-    height: 100%;
-    padding-left: 70px;
+  width: 100%;
+  height: 100%;
+  font-family: 'DINPro', sans-serif;
+  line-height: 1;
+}
+
+header,
+section[class^='page-'],
+footer {
+  padding-left: 70px;
+  padding-right: 50px;
+  z-index: 1;
+}
+
+/*
+    HEADER 
+*/
+
+header {
+  position: fixed;
+  top: 0;
 }
 
 .home {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 20px;
-    margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+  margin-top: 25px;
 }
 
 h1 {
-    font-size: 34px;
-    font-family: "Circe";
-    color: rgb(39, 39, 39);
-    text-transform: uppercase;
-    line-height: 1.024;      
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-family: 'Circe';
+  font-weight: 200;
+  color: rgb(39, 39, 39);
+  text-transform: uppercase;
+}
+
+.home img {
+  height: 1.5rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+/*
+    MAIN
+*/
+
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  height: 100%;
 }
 
 main {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
+  display: flex;
+  overflow: auto;
+  flex: none;
+  width: 100%;
+  height: 100%;
+  flex-flow: row nowrap;
+  scroll-snap-type: x mandatory;
+
+  background: url('images/background.png') local;
+  background-size: cover;
+
+  
 }
 
-section {
-    min-width: 100%;
-    min-height: 100%;
+section[class^='page-'] {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  font-size: 64px;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  flex: none;
+  position: relative;
 }
+
+/*
+  PAGE 1
+*/
 
 h2 {
-    font-size: 27px;
-    color: rgb(36, 36, 36);
-    text-transform: uppercase;      
-}  
+  font-size: 27px;
+  color: rgb(36, 36, 36);
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-top: 3rem;
+}
 
 .page-1 .text {
-    font-size: 109px;
-    font-family: "Gilroy";
-    color: rgb(23, 23, 23);
-    text-transform: uppercase;
-    line-height: 1.073;
-    text-align: left;     
+  font-size: 7.3rem;
+  font-family: 'Gilroy';
+  font-weight: 200;
+  color: rgb(23, 23, 23);
+  text-transform: uppercase;
+  text-align: left;
 }
 
-b {
-    font-family: 'Gilroy ExtraBold';
+.text-wrapper {
+  width: 100%;
+  z-index: 4;
 }
+
+.text-wrapper b {
+  font-weight: 800;
+}
+
+button.action {
+  /*min-width: 255px;*/
+  height: 80px;
+  background-color: var(--buttons-color);
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 17px;
+  gap: 20px;
+
+  font-size: 26px;
+  font-family: 'DINPro';
+  color: rgb(23, 23, 23);
+  text-align: left;
+
+  float: right;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+button.action span {
+  padding-right: 10px;
+}
+
+img.action {
+  box-shadow: -2px -2px 4px #48021a78, 2px 2px 4px 0px rgb(255 255 255 / 60%);
+  background-color: #171717;
+  border: 1px var(--buttons-color) solid;
+  border-radius: 100px;
+  padding: 15px;
+}
+
+/*
+  IMAGES PAGE-1
+*/
+
+.pink_sperm {
+  position: relative;
+  width: 60%;
+  left: 41%;
+  top: -91%;
+}
+
+.bakteria-long {
+  position: absolute;
+  left: 0px;
+  width: 12%;
+  height: auto;
+  top: 10%;
+}
+
+.bacteria-blur-1 {
+  position: absolute;
+  left: 34%;
+  width: 8%;
+  bottom: 8%;
+}
+
+.bacteria-blur-2 {
+  position: absolute;
+  width: 7%;
+  top: 4%;
+  right: 3%;
+}
+
+.sperm-blur {
+  position: absolute;
+  width: 28%;
+  left: 0;
+  bottom: 6%;
+}
+
+.bacteria-1 {
+  position: absolute;
+  width: 7%;
+  left: 3%;
+  top: 65%;
+  animation: diagonal 5s linear 0s infinite alternate;
+
+  z-index: 2;
+}
+
+.bacteria-big {
+  position: absolute;
+  width: 22%;
+  bottom: 0;
+  right: 25%;
+  animation: resize-move 5s linear 0s infinite alternate;
+  overflow-y: hidden;
+}
+
+.bacteria-2 {
+  position: absolute;
+  width: 6%;
+  right: 21%;
+  top: 9%;
+  animation: resize-move 5s linear 0s infinite alternate;
+}
+
+/*
+  PAGE 2
+*/
 
 .page-2 .text {
-    font-size: 18px;
-    color: rgb(23, 23, 23);
-    line-height: 1.364;
-    width: 780px;
-    height: 450px;
-    overflow-y: scroll;
-}
-  
-footer {
-    margin-bottom: 15px;
+  font-size: 36px;
+  color: rgb(23, 23, 23);
+  width: 780px;
+  height: 450px;
+  overflow-y: scroll;
+
+  scrollbar-width: 5px;
+  scrollbar-color: var(--buttons-color) black;
 }
 
+.bacteria-sharp {
+  position: absolute;
+  width: 10%;
+  top: 20%;
+  right: 13%;
+  animation: orbit 30s linear infinite;
+  z-index: 5;
+}
+
+/*
+    FOOTER
+*/
+
+footer {
+  bottom: 15px;
+  position: fixed;
+}
+
+/*
+    ANOTHER    
+*/
+
 main::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+/*
+    ANIMATIONS
+*/
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes diagonal{
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+@keyframes resize-move {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(-10%) translateY(-5%) scale(1.1);
+  }
+  100%{
+    transform: translateX(-15%) translateY(0%) scale(1.0);
+  }
+}
+
+@keyframes spin-move {
+  0% {
+
+  }  
+}
+
+@keyframes orbit {
+  from { transform: rotate(180deg) translateX(60%) rotate(180deg); }
+  to   { transform: rotate(540deg) translateX(60%) rotate(540deg); }
+}
+
+img.spin {
+  animation: spin 5s linear 0s infinite;
 }
