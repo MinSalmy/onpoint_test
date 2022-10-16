@@ -62,3 +62,20 @@ class Slide {
         this.slides[this.currentSlide].classList.toggle('active');
     }
 }
+
+const spermImagesPage2 = document.querySelectorAll('.page-2 img[class^="sperm-"]');
+console.log(spermImagesPage2);
+// Создать наблюдателя
+const observer = new IntersectionObserver(entries => {
+    let index = 0;
+    // перебор записей
+    if (entries[0].isIntersecting) {
+      spermImagesPage2.forEach(image => {
+        image.classList.toggle(`.sperm-animation-${index % 2}`);
+        index++;
+      })
+    }
+});
+
+// Сообщить наблюдателю, какие элементы следует отслеживать
+observer.observe(document.querySelector('.sperm-1'));
