@@ -267,15 +267,43 @@ img.action {
   PAGE 2
 */
 
-.page-2 .text {
-  font-size: 36px;
-  color: rgb(23, 23, 23);
-  width: 780px;
-  height: 450px;
-  overflow-y: scroll;
+.header-page-2 {
+  width: 20%;
+  margin-bottom: 5%;
+}
 
+.text-wrapper-page-2{
+  display: flex;
+  width: 91%;
+  height: 58%;
+}
+
+.scroller {
+  width: 25px;  
+  margin-right: 4%;
+}
+
+.text-box-wrapper-page-2 {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 25px 60px 25px 30px;
+  line-height: 1.3;
+  border-radius: 50px;
+  box-shadow: 0 0 100px #9db9c6;
+}
+
+.page-2 .text {
+  font-size: 0.36em;
+  color: rgb(23, 23, 23);
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   scrollbar-width: 5px;
   scrollbar-color: var(--buttons-color) black;
+} 
+.page-2 .text:-webkit-scrollbar {
+  display: none;
 }
 
 .bacteria-sharp {
@@ -347,8 +375,4 @@ main::-webkit-scrollbar {
 @keyframes orbit {
   from { transform: rotate(180deg) translateX(60%) rotate(180deg); }
   to   { transform: rotate(540deg) translateX(60%) rotate(540deg); }
-}
-
-img.spin {
-  animation: spin 5s linear 0s infinite;
 }
