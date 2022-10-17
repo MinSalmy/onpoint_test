@@ -10,10 +10,10 @@
 </head>
 <body>
     <header>
-        <a class="home" href="#">            
+        <button class="home" href="#">            
             <img src="icons/home.svg" alt="home"> <img src="icons/divider.svg" alt="divider">
             <h1>Project</h1> 
-        </a>        
+        </button>        
     </header>
 
     <div class="scroll-wrapper">    
@@ -44,8 +44,9 @@
                 <h2 class="header-page-2">текст сообщения</h2>
                 <div class="text-wrapper-page-2">
                     <div class="scroller">
-                        <button class="scrollbar-thumb"></button>
-                        <img class="scrollbar-track" src="images/static/scrollbar-track.svg" alt="scrollbar-track">
+                        <input type="range" name="scrollbar" id="scrollbar" class="scrollbar">
+                    <!--   <button class="scrollbar-thumb"></button>
+                        <img class="scrollbar-track" src="images/static/scrollbar-track.svg" alt="scrollbar-track">--> 
                     </div>
                     <div class="text-box-wrapper-page-2">                    
                         <div class="text">
@@ -85,35 +86,75 @@
                 <img class="sperm-5" src="images/moving/page-2/sperm-5.png" alt="sperm-5">
             </section>
             <section class="page-3">
+                <img class="bottle" src="images/static/bottle.png" alt="bottle">
                 <h2>ключевое сообщение</h2>
-                <span class="brend">brend <b>xy</b></span>
-                <div class="food">
-                    Ehicula ipsum a arcu cursus vitae. Eu non diam phasellus vestibulum lorem sedrisus ultricies
-                </div>
-                <div class="schedule">
-                    A arcu cursus vitae
-                </div>
-                <div class="button-wrapper">                
-                    <button class="details action"> 
-                        <img src="icons/plus.svg" alt="details" class="action"> 
-                        <span>Подробнее</span>
-                    </button>
+                <span class="brend">brend<b>xy</b></span>
+                <div class="content">
+                    <div class="box-wrapper">
+                        <img class="food-icon" src="icons/icon2.png" alt="food-icon">
+                        <div class="food">                        
+                            Ehicula ipsum a arcu cursus vitae. Eu non diam phasellus vestibulum lorem sedrisus ultricies                        
+                        </div>
+                    </div>
+                    <div class="box-wrapper">                    
+                        <img class="schedule-icon" src="icons/icon1.png" alt="schedule-icon">
+                        <div class="schedule">
+                            A arcu cursus vitae
+                        </div>
+                        <div class="button-wrapper">                
+                            <button class="details action"> 
+                                <img src="icons/plus.svg" alt="details" class="action"> 
+                                <span>Подробнее</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                <dialog>
-                    <h2>преимущества</h2>
-                    <span class="brend">brend <b>xy</b></span>
+                <img src="images/moving/page-3/1.png" alt="bubble-1" class="bubble-1">
+                <img src="images/moving/page-3/2.png" alt="bubble-2" class="bubble-2">
+                <img src="images/moving/page-3/3.png" alt="bubble-3" class="bubble-3">
+                <img src="images/moving/page-3/4.png" alt="bubble-4" class="bubble-4">
+                <img src="images/moving/page-3/5.png" alt="bubble-5" class="bubble-5">
+                <img src="images/moving/page-3/6.png" alt="bubble-6" class="bubble-6">
+                <img src="images/moving/page-3/7.png" alt="bubble-7" class="bubble-7">
+                <img src="images/moving/page-3/8.png" alt="bubble-8" class="bubble-8">   
+                
+                <dialog class="dialog-advantages">
+                    <div class="dialog-wrapper">
+
+                    
+                    <div class="head">
+                        <h2>преимущества</h2>
+                        <img class="close-button" src="icons/close.svg" alt="close">
+                    </div>
+                    <span class="brend">brend<b>xy</b></span>
                     <div class="advantages">
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur  adipiscing elit </li>
-                            <li>Faucibus pulvinar elementum integer enim  </li>
-                            <li>Faucibus pulvinar elementum integer enim </li>
-                            <li>Mi bibendum neque egestas congue quisque  egestas diam  </li>
-                            <li>Venenatis lectus magna fringilla urna </li>
-                            <li>Venenatis lectus magna fringilla urna </li>
-                        </ul>
+                        <div class="slide active">
+                            <p class="number">01</p>
+                            <p class="advantage">Lorem ipsum dolor sit amet, consectetur  adipiscing elit</p>
+                            <p class="number">02</p>
+                            <p class="advantage">Faucibus pulvinar elementum integer enim</p>
+                            <p class="number">03</p>
+                            <p class="advantage">Faucibus pulvinar elementum integer enim</p>
+                        </div>
+                        <div class="slide">                            
+                            <p class="number">04</p>
+                            <p class="advantage">Mi bibendum neque egestas congue quisque  egestas diam</p>
+                            <p class="number">05</p>
+                            <p class="advantage">Venenatis lectus magna fringilla urna</p>
+                            <p class="number">06</p>
+                            <p class="advantage">Venenatis lectus magna fringilla urna</p>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <img class="prev" src="icons/prev.svg" alt="prev slide">                       
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <img class="next" src="icons/next.svg" alt="next slide">
+                      </div>
                     </div>
                 </dialog>
+            </div>
             </section>            
         </main>
     </div>
